@@ -1,0 +1,25 @@
+// this refuses to work and i have no idea why i am sorry
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+application {
+    mainClassName = 'RunEdgeConvert'
+}
+
+test {
+    filter {
+        includeTestsMatching "*Test"
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	compile 'junit:junit:4.12'
+	compile 'org.hamcrest:hamcrest-core:1.3'
+	testCompile 'junit:junit:4.12'
+	testCompile 'org.hamcrest:hamcrest-core:1.3'
+}
